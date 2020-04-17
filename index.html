@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laxx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <section class="anim intro" style="background-color: #04323d;">
+        <h1 style="text-align: center; font-size: 5em;">Scroll down</h1>
+        <span class="lax box2" data-lax-preset="leftToRight zoomIn-3"></span>
+        <span class="lax box3" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box4" data-lax-preset="leftToRight zoomIn-3"></span>
+        <span class="lax box5" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box6" data-lax-preset="leftToRight zoomIn-3"></span>
+    </section>
+    <section class="anim">
+        <h1 style="text-align: center; font-size: 5em;" class="lax" data-lax-preset="rightToLeft-.1 fadeInOut">ANIMATION</h1>
+
+        <span class="box"></span>
+        <span class="lax box2" data-lax-preset="leftToRight zoomIn-3"></span>
+        <span class="lax box3" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box4" data-lax-preset="leftToRight zoomIn-3"></span>
+        <span class="lax box5" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box6" data-lax-preset="leftToRight zoomIn-3"></span>
+    </section>
+    <section class="anim" style="background-color: red;">
+        <span class="lax box2" data-lax-preset="rightToLeft zoomIn-3"></span>
+        <span class="lax box3" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box4" data-lax-preset="rightToLeft zoomIn-3"></span>
+        <span class="lax box5" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box6" data-lax-preset="rightToLeft zoomIn-3"></span>
+    </section>
+    <section class="anim" style="background-color: blue;">
+        <span class="lax box2" data-lax-preset="leftToRight driftLeft"></span>
+        <span class="lax box3" data-lax-preset="spin driftLeft"></span>
+        <span class="lax box4" data-lax-preset="leftToRight driftLeft"></span>
+        <span class="lax box5" data-lax-preset="spin driftLeft"></span>
+        <span class="lax box6" data-lax-preset="leftToRight driftLeft"></span>
+    </section>
+    <section class="anim" style="background-color: green;">
+        <span class="lax box2" data-lax-preset="rightToLeft zoomIn-3" data-lax-hue-rotate=""></span>
+        <span class="lax box3" data-lax-preset="spin zoomIn-3" data-lax-hue-rotate=""></span>
+        <span class="lax box4" data-lax-preset="rightToLeft zoomIn-3" data-lax-hue-rotate=""></span>
+        <span class="lax box5" data-lax-preset="spin zoomIn-3" data-lax-hue-rotate=""></span>
+        <span class="lax box6" data-lax-preset="rightToLeft zoomIn-3" data-lax-hue-rotate=""></span>
+    </section>
+    <section class="anim" style="background-color: greenyellow;">
+        <span class="lax box2" data-lax-preset="leftToRight swing"></span>
+        <span class="lax box3" data-lax-preset="spin swing"></span>
+        <span class="lax box4" data-lax-preset="leftToRight swing"></span>
+        <span class="lax box5" data-lax-preset="spin swing"></span>
+        <span class="lax box6" data-lax-preset="leftToRight swing"></span>
+    </section>
+    <section class="anim" style="background-color: blueviolet;">
+        <span class="lax box2" data-lax-preset="rightToLeft zoomIn-3"></span>
+        <span class="lax box3" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box4" data-lax-preset="rightToLeft zoomIn-3"></span>
+        <span class="lax box5" data-lax-preset="spin zoomIn-3"></span>
+        <span class="lax box6" data-lax-preset="rightToLeft zoomIn-3"></span>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+</body>
+</html>
